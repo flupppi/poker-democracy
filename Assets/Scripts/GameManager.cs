@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private TMP_Text counterText;
 
+
+
+
     public TurnStates turnState;
     //public UnityEvent OnFinishRound;
 
