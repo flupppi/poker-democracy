@@ -1183,6 +1183,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5746351309063599016, guid: 09cc12587ed3f844cb9c45b0e83ff319, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746351309063599016, guid: 09cc12587ed3f844cb9c45b0e83ff319, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746351309063599016, guid: 09cc12587ed3f844cb9c45b0e83ff319, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9607843
+      objectReference: {fileID: 0}
     - target: {fileID: 7091785051362565987, guid: 09cc12587ed3f844cb9c45b0e83ff319, type: 3}
       propertyPath: playerName
       value: Player 2
@@ -2953,6 +2965,30 @@ PrefabInstance:
     - target: {fileID: 2016970510175092815, guid: 09cc12587ed3f844cb9c45b0e83ff319, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746351309063599016, guid: 09cc12587ed3f844cb9c45b0e83ff319, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746351309063599016, guid: 09cc12587ed3f844cb9c45b0e83ff319, type: 3}
+      propertyPath: m_Color.g
+      value: 0.12190771
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746351309063599016, guid: 09cc12587ed3f844cb9c45b0e83ff319, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604752162322716315, guid: 09cc12587ed3f844cb9c45b0e83ff319, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604752162322716315, guid: 09cc12587ed3f844cb9c45b0e83ff319, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604752162322716315, guid: 09cc12587ed3f844cb9c45b0e83ff319, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7091785051362565987, guid: 09cc12587ed3f844cb9c45b0e83ff319, type: 3}
       propertyPath: playerName

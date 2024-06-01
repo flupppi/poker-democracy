@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c1fab0a35363b6448056821fef4bbe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 0.8765787, b: 0.023584902, a: 0}
+  color: {r: 1, g: 0.8756219, b: 0, a: 1}
   titleTextField: {fileID: 2152862749048057521}
   descriptionText: {fileID: 736295152337616088}
   icon: {fileID: 5594233270311465403}

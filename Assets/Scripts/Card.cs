@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -13,7 +14,8 @@ public enum CardState
 
 public class Card : MonoBehaviour
 {
-    [SerializeField] private Color color;
+    [SerializeField] public Color color;
+    public Color selectColor;
     [SerializeField] private TMP_Text titleTextField;
     [SerializeField] private TMP_Text descriptionText;
     [SerializeField] private Image icon;
@@ -22,11 +24,9 @@ public class Card : MonoBehaviour
     [SerializeField] private TMP_Text influenceText;
     [SerializeField] private CardState cardState;
     [SerializeField] private Player mostInfluencePlayer = null;
-    [SerializeField] MeshRenderer meshRenderer;
-
-
-
-
+    [SerializeField] public MeshRenderer meshRenderer;
+    [SerializeField] private TMP_Text bet_player1;
+    [SerializeField] private TMP_Text bet_player2;
     public string cardTitle;
     public string cardDescription;
     public Sprite cardIcon;
@@ -53,4 +53,32 @@ public class Card : MonoBehaviour
         icon.sprite = cardIcon;
         meshRenderer.material.color = color;
     }
+    public void ChangeColor(bool selected)
+    {
+        if (selected) {
+            meshRenderer.material.color = selectColor;
+        }
+        else
+        {
+            meshRenderer.material.color = color;
+        }
+    }
+
+    internal void RaiseCard(bool v)
+    {
+        float raiseAmount;
+        if (v)
+        {
+            raiseAmount = 1.0f;
+        }
+        else
+        {
+            raiseAmount = 0.0f;
+        }
+        Vector3 currentPos = transform.position;
+        currentPos.y = raiseAmount;
+        transform.position = currentPos;
+
+    }
+
 }

@@ -154,15 +154,13 @@ public class GameManager : MonoBehaviour
         {
             if (card != selectedCard)
             {
-                Vector3 currentPos = card.transform.position;
-                currentPos.y = 0.0f;
-                card.transform.position = currentPos;
+                card.RaiseCard(false);
+                card.ChangeColor(true);
             }
             else
             {
-                Vector3 currentPos = card.transform.position;
-                currentPos.y = 0.5f;
-                card.transform.position = currentPos;
+                card.RaiseCard(true);
+                card.ChangeColor(false);
             }
         }
     }

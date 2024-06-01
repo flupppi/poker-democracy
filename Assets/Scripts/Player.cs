@@ -48,6 +48,19 @@ public class Player : MonoBehaviour
 
     public void PlaceBet()
     {
+        if (selectedCard == null)
+        {
+        }
+        else
+        {
+            selectedCard.RaiseCard(false);
+
+            // do something with the selected card. 
+
+
+            // unselect card
+            selectedCard = null;
+        }
         GameManager.Instance.FinishTurn();
         Debug.Log("Bet has been Placed");
     }
