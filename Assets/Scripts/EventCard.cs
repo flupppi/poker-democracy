@@ -4,14 +4,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum CardState
-{
-    Idle,
-    Dragged,
-    Dropped
-}
 
-public class Card : MonoBehaviour
+public class EventCard : MonoBehaviour
 {
     [SerializeField] private Color color;
     [SerializeField] private TMP_Text titleTextField;
@@ -22,7 +16,6 @@ public class Card : MonoBehaviour
     [SerializeField] private TMP_Text influenceText;
     [SerializeField] private CardState cardState;
     [SerializeField] private Player mostInfluencePlayer = null;
-    [SerializeField] MeshRenderer meshRenderer;
 
 
 
@@ -30,9 +23,10 @@ public class Card : MonoBehaviour
     public string cardTitle;
     public string cardDescription;
     public Sprite cardIcon;
-    public int revenueIncrease;
-    public int minimumCost;
-    public int numberOfInfluence;
+    public float revenueIncreaseEffect;
+    public float minimumCostEffect;
+    public float numberOfInfluenceEffect;
+    [SerializeField] MeshRenderer meshRenderer;
     void Start()
     {
         
@@ -47,10 +41,12 @@ public class Card : MonoBehaviour
     {
         titleTextField.text = cardTitle;
         descriptionText.text = cardDescription;
-        revenueText.text = revenueIncrease.ToString();
-        influenceText.text = numberOfInfluence.ToString();
-        minimumCostText.text = minimumCost.ToString();
+        revenueText.text = revenueIncreaseEffect.ToString();
+        influenceText.text = numberOfInfluenceEffect.ToString();
+        minimumCostText.text = minimumCostEffect.ToString();
         icon.sprite = cardIcon;
+
         meshRenderer.material.color = color;
+        
     }
 }

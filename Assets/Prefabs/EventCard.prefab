@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7558455916413516481}
-  - component: {fileID: 2413745750250579504}
+  - component: {fileID: 6965260043850099804}
   m_Layer: 0
-  m_Name: Card
+  m_Name: EventCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 6351403240019287758}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2413745750250579504
+--- !u!114 &6965260043850099804
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,10 +43,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 999463926491850036}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fa6a149c592c994e98dbfcc9ac9cb42, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c1fab0a35363b6448056821fef4bbe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+  color: {r: 1, g: 0.8765787, b: 0.023584902, a: 0}
   titleTextField: {fileID: 2152862749048057521}
   descriptionText: {fileID: 736295152337616088}
   icon: {fileID: 5594233270311465403}
@@ -55,13 +55,13 @@ MonoBehaviour:
   influenceText: {fileID: 4134758066862031817}
   cardState: 0
   mostInfluencePlayer: {fileID: 0}
-  meshRenderer: {fileID: 4627509046520544018}
   cardTitle: 
   cardDescription: 
   cardIcon: {fileID: 0}
-  revenueIncrease: 0
-  minimumCost: 0
-  numberOfInfluence: 0
+  revenueIncreaseEffect: 0
+  minimumCostEffect: 0
+  numberOfInfluenceEffect: 0
+  meshRenderer: {fileID: 4627509046520544018}
 --- !u!1 &2208882586327342933
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,7 +96,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.55, y: -2.1}
+  m_AnchoredPosition: {x: 1.46, y: -2.02}
   m_SizeDelta: {x: 2.695, y: 2.582}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &558985021634601648
@@ -321,8 +321,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.05, y: 12.977}
-  m_SizeDelta: {x: 2.02, y: 3.078}
+  m_AnchoredPosition: {x: 11.07, y: 12.977}
+  m_SizeDelta: {x: 16.059, y: 3.078}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3276817140312320551
 CanvasRenderer:
@@ -695,8 +695,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.929, y: 13.073}
-  m_SizeDelta: {x: 2.102, y: 2.886}
+  m_AnchoredPosition: {x: 10.661, y: 13.073}
+  m_SizeDelta: {x: 27.281, y: 2.886}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1859416660316848983
 CanvasRenderer:
@@ -829,9 +829,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 6.65, y: -2.06}
+  m_AnchoredPosition: {x: 7.45, y: -2.05}
   m_SizeDelta: {x: 2.503, y: 2.555}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.49999994, y: 0.5}
 --- !u!222 &7064303942285662088
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -904,7 +904,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -5.68, y: -2.15}
+  m_AnchoredPosition: {x: -4.7, y: -1.99}
   m_SizeDelta: {x: 2.695, y: 2.692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8767830092317154730
@@ -1113,8 +1113,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.504, y: 13.087}
-  m_SizeDelta: {x: 1.828, y: 2.859}
+  m_AnchoredPosition: {x: 3.831, y: 13.087}
+  m_SizeDelta: {x: 26.497, y: 2.859}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4184720285222703036
 CanvasRenderer:
