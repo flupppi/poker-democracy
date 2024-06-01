@@ -1334,7 +1334,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca6f35ae72d925b47930098da2c89bd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 1282709112868169612, guid: 75a0b6f67064600488776e9100bc55c2, type: 3}
+  cardEntityToSpawn: {fileID: 999463926491850036, guid: 7087fab49653c3b4bab22c3310458abd, type: 3}
+  sectorsOfInfluence:
+  - {fileID: 11400000, guid: 1d7ec6fe5764f674eab38ea8f30a9f2a, type: 2}
+  - {fileID: 11400000, guid: 92dec9e7e9859904ab90b5b98a8b2bce, type: 2}
+  - {fileID: 11400000, guid: 4c82f9179982568498b0a23aeee3574c, type: 2}
+  - {fileID: 11400000, guid: ef9a85822eeaf1649ba710f1bd83ce2b, type: 2}
+  sectorsOfPower:
+  - {fileID: 11400000, guid: 6b8caa7918ef9cc429770b7a5ee5a4cb, type: 2}
+  - {fileID: 11400000, guid: a07c36ec7bf01534c85564f8e9e9bff4, type: 2}
+  - {fileID: 11400000, guid: f8ddd409ea9b2e149b5a1976221506c2, type: 2}
 --- !u!1001 &7099696215100325517
 PrefabInstance:
   m_ObjectHideFlags: 0
