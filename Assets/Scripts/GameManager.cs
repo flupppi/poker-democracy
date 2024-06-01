@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private TMP_Text counterText;
 
-
+    [SerializeField] private List<Player> players;
 
 
     public TurnStates turnState;
