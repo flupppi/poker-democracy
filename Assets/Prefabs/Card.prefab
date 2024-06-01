@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7558455916413516481}
   - component: {fileID: 2413745750250579504}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,6 +62,81 @@ MonoBehaviour:
   revenueIncrease: 0
   minimumCost: 0
   numberOfInfluence: 0
+--- !u!1 &1972266210000012995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4586075751164219322}
+  - component: {fileID: 1239296981019388530}
+  - component: {fileID: 6012737276788088249}
+  m_Layer: 8
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4586075751164219322
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972266210000012995}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1066899531823911058}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1239296981019388530
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972266210000012995}
+  m_CullTransparentMesh: 1
+--- !u!114 &6012737276788088249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972266210000012995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &2208882586327342933
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,7 +148,7 @@ GameObject:
   - component: {fileID: 3556616917571397056}
   - component: {fileID: 558985021634601648}
   - component: {fileID: 999026106106209901}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Minimum Cost Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +223,7 @@ GameObject:
   - component: {fileID: 1576448971924148077}
   - component: {fileID: 5029461137453570691}
   - component: {fileID: 5594233270311465403}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +298,7 @@ GameObject:
   - component: {fileID: 8064737164128209346}
   - component: {fileID: 7522046630753568188}
   - component: {fileID: 1385301400696897844}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Revenue Icon (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +373,7 @@ GameObject:
   - component: {fileID: 4995278471185002826}
   - component: {fileID: 3276817140312320551}
   - component: {fileID: 4134758066862031817}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Influence Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +508,7 @@ GameObject:
   - component: {fileID: 3213962548040552113}
   - component: {fileID: 4627509046520544018}
   - component: {fileID: 3344131544583489233}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,7 +590,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -537,7 +612,7 @@ GameObject:
   - component: {fileID: 1951780776381720796}
   - component: {fileID: 7443668700273051341}
   - component: {fileID: 736295152337616088}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Description Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -672,7 +747,7 @@ GameObject:
   - component: {fileID: 8109087683551875230}
   - component: {fileID: 1859416660316848983}
   - component: {fileID: 7867989690743690743}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Minimum Cost Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -806,7 +881,7 @@ GameObject:
   - component: {fileID: 6392005743541852214}
   - component: {fileID: 7064303942285662088}
   - component: {fileID: 2748653547560878348}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Influence Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -881,7 +956,7 @@ GameObject:
   - component: {fileID: 893910205824006109}
   - component: {fileID: 8767830092317154730}
   - component: {fileID: 7289738783667014442}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Revenue Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -956,7 +1031,7 @@ GameObject:
   - component: {fileID: 6327155988723466430}
   - component: {fileID: 4105536342826124307}
   - component: {fileID: 2152862749048057521}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Title Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1090,7 +1165,7 @@ GameObject:
   - component: {fileID: 116779660139046721}
   - component: {fileID: 4184720285222703036}
   - component: {fileID: 8316363316063184732}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Revenue Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1225,7 +1300,7 @@ GameObject:
   - component: {fileID: 1693673788803439843}
   - component: {fileID: 2174295617056068751}
   - component: {fileID: 2113837633757243565}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1254,6 +1329,7 @@ RectTransform:
   - {fileID: 116779660139046721}
   - {fileID: 8109087683551875230}
   - {fileID: 4995278471185002826}
+  - {fileID: 4586075751164219322}
   m_Father: {fileID: 7558455916413516481}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

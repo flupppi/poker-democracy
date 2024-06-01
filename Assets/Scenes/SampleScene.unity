@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 107356283}
   - component: {fileID: 107356282}
   - component: {fileID: 107356281}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1611,6 +1611,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006322910}
   m_CullTransparentMesh: 1
+--- !u!114 &1167261914 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7091785051362565987, guid: 09cc12587ed3f844cb9c45b0e83ff319, type: 3}
+  m_PrefabInstance: {fileID: 563738296}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8017505713e28524eba8ea5af5e90827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1286007263
 GameObject:
   m_ObjectHideFlags: 0
@@ -2961,6 +2972,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2016970510175092815, guid: 09cc12587ed3f844cb9c45b0e83ff319, type: 3}
   m_PrefabInstance: {fileID: 1198930729511062317}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1198930729511062319 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7091785051362565987, guid: 09cc12587ed3f844cb9c45b0e83ff319, type: 3}
+  m_PrefabInstance: {fileID: 1198930729511062317}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8017505713e28524eba8ea5af5e90827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8943524443516122978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3001,6 +3023,18 @@ PrefabInstance:
       propertyPath: player2VotersText
       value: 
       objectReference: {fileID: 1286007265}
+    - target: {fileID: 2696369319290749308, guid: a7994aabc08cdd94faba0fd80335e1b6, type: 3}
+      propertyPath: players.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2696369319290749308, guid: a7994aabc08cdd94faba0fd80335e1b6, type: 3}
+      propertyPath: players.Array.data[0]
+      value: 
+      objectReference: {fileID: 1198930729511062319}
+    - target: {fileID: 2696369319290749308, guid: a7994aabc08cdd94faba0fd80335e1b6, type: 3}
+      propertyPath: players.Array.data[1]
+      value: 
+      objectReference: {fileID: 1167261914}
     - target: {fileID: 3253975467153175954, guid: a7994aabc08cdd94faba0fd80335e1b6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.5003544

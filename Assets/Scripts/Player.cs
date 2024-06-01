@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class Player : MonoBehaviour
 {
@@ -24,16 +27,16 @@ public class Player : MonoBehaviour
     [SerializeField] public Button incrementButton;
     [SerializeField] public Button decrementButton;
 
+    [SerializeField] public Image backgroundPanel;
+    Camera camera;
+    public Card selectedCard;
 
-
-    
     public void IncrementBetAmount()
     {
-        if (bet < bankAmount) {
+        if (bet < bankAmount)
+        {
             bet++;
         }
-
-    
     }
     public void DecrementBetAmount()
     {
@@ -45,6 +48,7 @@ public class Player : MonoBehaviour
 
     public void PlaceBet()
     {
+        GameManager.Instance.FinishTurn();
         Debug.Log("Bet has been Placed");
     }
 
@@ -52,6 +56,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         playerTitle.text = playerName;
+        camera = FindFirstObjectByType<Camera>();
     }
 
     void Update()
@@ -60,6 +65,55 @@ public class Player : MonoBehaviour
         scoreText.text = score.ToString();
         bankText.text = bankAmount.ToString();
         revenueText.text = revenue.ToString();
-
     }
+
+    public void SetPlayerActive()
+    {
+        incrementButton.gameObject.SetActive(true);
+        decrementButton.gameObject.SetActive(true);
+        placeButton.gameObject.SetActive(true);
+        backgroundPanel.color = Color.green;
+    }
+    public void SetPlayerInactive()
+    {
+        incrementButton.gameObject.SetActive(false);
+        decrementButton.gameObject.SetActive(false);
+        placeButton.gameObject.SetActive(false);
+        backgroundPanel.color = Color.grey;
+    }
+
+
+    // See Order of Execution for Event Functions for information on FixedUpdate() and Update() related to physics queries
+    void FixedUpdate()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            // Bit shift the index of the layer (8) to get a bit mask
+            int layerMask = 1 << 4;
+
+            // This would cast rays only against colliders in layer 8.
+            // But instead we want to collide against everything except layer 8. The ~ operator does this, it inverts a bitmask.
+            layerMask = ~layerMask;
+
+            RaycastHit hit;
+            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity,layerMask ))
+            {
+                Transform objectHit = hit.transform;
+                if (objectHit != null)
+                {
+                    if (objectHit.transform.parent?.GetComponent<Card>() != null)
+                    {
+                        selectedCard = objectHit.transform.parent.GetComponent<Card>();
+                    }
+                }
+                
+                // Do something with the object that was hit by the raycast.
+            }
+            GameManager.Instance.RaiseCard(selectedCard);
+        }
+    }
+      
+    
 }

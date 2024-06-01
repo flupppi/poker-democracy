@@ -44,6 +44,9 @@ public class Spawner : MonoBehaviour
                 currentSpawnPointIndex = (currentSpawnPointIndex + 1) % spawnManagerValues.spawnPoints.Length;
 
                 card.InitCard();
+                GameManager.Instance.cards.Add(card);
+
+
                 instanceNumber++;
 
             }
@@ -73,6 +76,7 @@ public class Spawner : MonoBehaviour
                 currentSpawnPointIndex = (currentSpawnPointIndex + 1) % spawnManagerValues.spawnPoints.Length;
 
                 card.InitCard();
+                GameManager.Instance.events.Add(card);
                 instanceNumber++;
 
             }

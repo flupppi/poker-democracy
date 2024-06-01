@@ -12,9 +12,6 @@ public enum TurnStates
     Voting
 }
 public class GameManager : MonoBehaviour
-
-
-
 {
     [SerializeField] private int playerCount = 1;
     [SerializeField] private int counter = 0;
@@ -30,6 +27,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] int player1Voters;
     [SerializeField] int player2Voters;
     [SerializeField] Button finishTurnButton;
+
+    [SerializeField] private Player activePlayer;
+
+    public List<Card> cards;
+    public List<EventCard> events;
 
     public static GameManager Instance { get; private set; }
 
@@ -62,6 +64,11 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        int startPlayer = UnityEngine.Random.Range(1, players.Count);
+        activePlayer = players[startPlayer];
+        activePlayer.SetPlayerActive();
+
         //SpawnPopulation();
     }
 
@@ -84,7 +91,7 @@ public class GameManager : MonoBehaviour
 
         if ((bettingTime - Time.deltaTime) > 0.0f)
         {
-            bettingTime = bettingTime - Time.deltaTime;
+            //bettingTime = bettingTime - Time.deltaTime;
         }
         else
         {
@@ -121,9 +128,42 @@ public class GameManager : MonoBehaviour
 
     public void FinishTurn()
     {
+
+        ChangePlayer();
         Debug.Log("Player Finished Turn");
     }
 
+    public void ChangePlayer()
+    {
+        foreach (Player player in players)
+        {
+            if (player != activePlayer)
+            {
+                activePlayer.SetPlayerInactive();
+                activePlayer = player;
+                activePlayer.SetPlayerActive();
+                return;
+            }
+        }
+            
+    }
 
-
+    internal void RaiseCard(Card selectedCard)
+    {
+        foreach(Card card in cards)
+        {
+            if (card != selectedCard)
+            {
+                Vector3 currentPos = card.transform.position;
+                currentPos.y = 0.0f;
+                card.transform.position = currentPos;
+            }
+            else
+            {
+                Vector3 currentPos = card.transform.position;
+                currentPos.y = 0.5f;
+                card.transform.position = currentPos;
+            }
+        }
+    }
 }
