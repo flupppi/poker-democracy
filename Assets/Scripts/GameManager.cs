@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 public enum TurnStates
@@ -15,6 +16,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int maxRounds = 11;
     [SerializeField] float bettingTime = 3.0f;
     [SerializeField] float votingTime = 1.0f;
+
+    [SerializeField] private TMP_Text counterText;
 
     public TurnStates turnState;
     //public UnityEvent OnFinishRound;
@@ -55,12 +58,15 @@ public class GameManager : MonoBehaviour
         Debug.Log("Finished Voting Round");
         bettingTime = 3.0f;
         counter++;
+        counterText.text = counter.ToString();
     }
+
     void OnFinishBettingRound()
     {
         Debug.Log("Finished Betting Round");
         turnState = TurnStates.Voting;
         OnFinishVotingRound();
-
     }
+
+
 }
